@@ -5,8 +5,10 @@ import Store from "./Store";
 
 export default function App() {
   return (
-    <Store>
-      <Feed />
-    </Store>
+    <div className="app">
+      <Store>
+        <Feed />
+      </Store>
+    </div>
   );
 }
