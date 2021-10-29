@@ -1,0 +1,49 @@
+::-webkit-scrollbar {
+    width: 3px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+.gif {
+    width: 220px;
+    height: 400px;
+    background-color:white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    overflow-y: scroll;
+  }
+
+
+
+  .gif-images {
+    background-color:white;
+      width: 100%;
+      height: 100%;
+      padding: 5px 10px 10px 10px;
+      z-index: 2;
+  }
+
+  .gif-input {
+      position: sticky;
+      top: 0;
+  }
+
+  .gif-input > input {
+    border-radius:5px;
+    margin: 20px 5px;
+    padding: 5px 10px;
+  }
+
+  
