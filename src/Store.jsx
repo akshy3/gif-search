@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export const Context = React.createContext();
-var schema = []
+var schema = [];
 const Store = ({ children }) => {
   const [posts, setPosts] = useState(() => {
     const val = JSON.parse(localStorage.getItem("posts"));
