@@ -1,13 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useRef } from "react";
 import Gif from "../gif/Gif";
 import "./share.css";
+import { Context } from "../../Store";
 
 function Share() {
   const [onGif, setOnGif] = useState(false);
   const [isGifSet, setIsGifSet] = useState(false); // For checking if gif is set
+  const [posts, setPosts] = useContext(Context);
+  const [gifs, setGifs] = useState([]); // Storing gif
+  const input = useRef("");
 
-  const handleShareButton = () => {};
-  const [Gifs, setGifs] = useState([]); // Storing gif
+  const handleShareButton = (e) => {
+    setPosts((post) => {
+      console.log("input", input);
+      return [
+        ...post,
+        {
+          desc: input.current.value,
+          gifs: gifs,
+        },
+      ];
+    });
+    setGifs([])
+  };
   return (
     <div className="share-container">
       <div className="share">
@@ -18,10 +33,14 @@ function Share() {
               src="assets/person/9.jpeg"
               alt=""
             />
-            <input placeholder="What's in your mind?" className="shareInput" />
+            <input
+              placeholder="What's in your mind?"
+              className="shareInput"
+              ref={input}
+            />
           </div>
           {isGifSet &&
-            Gifs.map((g, index) => {
+            gifs.map((g, index) => {
               return (
                 <div key={index} className="selected-gifs">
                   <img src={g} alt="gif" />
