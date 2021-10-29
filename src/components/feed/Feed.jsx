@@ -13,7 +13,7 @@ export default function Feed() {
       <div className="feedWrapper">
         <Share />
 
-        {posts.map((p,index) => (
+        {posts.reverse().map((p,index) => (
           <Post key={index} post={p} />
         ))}
       </div>
