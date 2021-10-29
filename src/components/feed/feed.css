@@ -8,11 +8,11 @@
 
 .feedWrapper{
     padding: 20px;
-    min-width: 50%;
+    min-width: 50vw;
 }
 
 @media screen and (max-width: 600px){
     .feedWrapper {
-        min-width: 90%;
+        min-width: 90vw;
     }
 }
