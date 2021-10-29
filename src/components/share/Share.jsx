@@ -12,7 +12,6 @@ function Share() {
 
   const handleShareButton = (e) => {
     setPosts((post) => {
-      console.log("input", input);
       return [
         ...post,
         {
@@ -21,7 +20,9 @@ function Share() {
         },
       ];
     });
-    setGifs([])
+
+    setGifs([]);
+    input.current.value="";
   };
   return (
     <div className="share-container">
