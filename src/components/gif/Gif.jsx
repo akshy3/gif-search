@@ -44,7 +44,6 @@ function Gif(props) {
   };
 
   const handleImageClick = (el) => () => {
-    console.log("clicked", el);
     props.setOnGif(false);
     props.setIsGifSet(true);
     props.setGifs((old) => [...old, el.images.fixed_width.url]);

@@ -6,8 +6,8 @@ import {Context} from "../../Store"
 
 export default function Feed() {
 
+  // eslint-disable-next-line 
   const [posts, setPosts] = useContext(Context)
-  console.log(posts)
   return (
     <div className="feed">
       <div className="feedWrapper">

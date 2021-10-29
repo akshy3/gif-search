@@ -2,10 +2,13 @@ import React, { useState, useContext, useRef } from "react";
 import Gif from "../gif/Gif";
 import "./share.css";
 import { Context } from "../../Store";
+import gificon from "../images/gif-icon.png";
+import profile from "../images/profile.jpeg";
 
 function Share() {
   const [onGif, setOnGif] = useState(false);
   const [isGifSet, setIsGifSet] = useState(false); // For checking if gif is set
+  // eslint-disable-next-line
   const [posts, setPosts] = useContext(Context);
   const [gifs, setGifs] = useState([]); // Storing gif
   const input = useRef("");
@@ -22,18 +25,14 @@ function Share() {
     });
 
     setGifs([]);
-    input.current.value="";
+    input.current.value = "";
   };
   return (
     <div className="share-container">
       <div className="share">
         <div className="shareWrapper">
           <div className="shareTop">
-            <img
-              className="shareProfileImg"
-              src="assets/person/9.jpeg"
-              alt=""
-            />
+            <img className="shareProfileImg" src={profile} alt="" />
             <input
               placeholder="What's in your mind?"
               className="shareInput"
@@ -53,11 +52,7 @@ function Share() {
             <div className="shareOptions">
               <div className="shareOption">
                 <div className="gif-clickable" onClick={() => setOnGif(!onGif)}>
-                  <img
-                    className="shareIcon"
-                    src="assets/gif-icon.png"
-                    alt="gif"
-                  />
+                  <img className="shareIcon" src={gificon} alt="gif" />
                   <span className="shareOptionText">GIF</span>
                 </div>
                 <div className="gif-select">
