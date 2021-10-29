@@ -1,4 +1,6 @@
 {
+  
+  "homepage": "https://mayasur.github.io/gif-search-UI",
   "name": "assignment",
   "version": "0.1.0",
   "private": true,
@@ -10,8 +12,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1",
-    "homepage": "https://mayasur.github.io/gif-search-UI"
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

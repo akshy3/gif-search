@@ -15,7 +15,7 @@ function Share() {
           <div className="shareTop">
             <img
               className="shareProfileImg"
-              src="/assets/person/9.jpeg"
+              src="assets/person/9.jpeg"
               alt=""
             />
             <input placeholder="What's in your mind?" className="shareInput" />
@@ -35,7 +35,7 @@ function Share() {
                 <div className="gif-clickable" onClick={() => setOnGif(!onGif)}>
                   <img
                     className="shareIcon"
-                    src="/assets/gif-icon.png"
+                    src="assets/gif-icon.png"
                     alt="gif"
                   />
                   <span className="shareOptionText">GIF</span>
