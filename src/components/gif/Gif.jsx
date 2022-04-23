@@ -24,11 +24,13 @@ function Gif(props) {
   useEffect(() => {
     setLoading(true);
     if (search !== "") {
+      let api_key = process.env.REACT_APP_API_KEY;
+      let url =
+        "https://api.giphy.com/v1/gifs/search?api_key=" +
+        api_key +
+        "&limit=10&q=";
       //fetching searched gifs from giphy API
-      fetch(
-        "https://api.giphy.com/v1/gifs/search?api_key=HyszZR1z4zjgGoSlBu6rZEYWWaa8C6l4&limit=10&q=" +
-          search
-      )
+      fetch(url + search)
         .then((response) => {
           return response.json();
         })
